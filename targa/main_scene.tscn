@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfbw5usx3ttwx"]
+
+[ext_resource type="Texture2D" uid="uid://cqmxpoj1ijj6u" path="res://bolakkkk.webp" id="1_8sykk"]
+[ext_resource type="Script" path="res://rigid_body_2d.gd" id="2_6whta"]
+
+[sub_resource type="Gradient" id="Gradient_3a24a"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_2fcsw"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gto7b"]
+color_ramp = SubResource("Gradient_3a24a")
+noise = SubResource("FastNoiseLite_2fcsw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwfrf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbukb"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="fundo" type="Sprite2D" parent="."]
+position = Vector2(576, 360)
+scale = Vector2(2.10937, 1.14062)
+texture = SubResource("NoiseTexture2D_gto7b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(580, 548)
+scale = Vector2(35.75, 0.250001)
+
+[node name="ground" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_8sykk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_rwfrf")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(552, 512)
+script = ExtResource("2_6whta")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_bbukb")
+
+[node name="player" type="Sprite2D" parent="RigidBody2D"]
+texture_filter = 1
+position = Vector2(0, 1.52588e-05)
+scale = Vector2(1, 0.999999)
+texture = ExtResource("1_8sykk")
