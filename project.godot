@@ -13,7 +13,7 @@ config_version=5
 config/name="Brickout"
 run/main_scene="res://main_scene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://6e104641-36d2-4a17-b119-01fac5a1558d.webp"
 
 [input]
 
