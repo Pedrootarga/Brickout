@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqmxpoj1ijj6u"
-path="res://.godot/imported/bolakkkk.webp-88cdfc1292a8c40a173f7b2b3c1e618d.ctex"
+path="res://.godot/imported/Brickout.webp-14dc9692d8ec1b7fbf720444cf044a18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bolakkkk.webp"
-dest_files=["res://.godot/imported/bolakkkk.webp-88cdfc1292a8c40a173f7b2b3c1e618d.ctex"]
+source_file="res://Brickout.webp"
+dest_files=["res://.godot/imported/Brickout.webp-14dc9692d8ec1b7fbf720444cf044a18.ctex"]
 
 [params]
 
