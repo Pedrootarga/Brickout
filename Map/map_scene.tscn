@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfbw5usx3ttwx"]
+
+[ext_resource type="Texture2D" uid="uid://bcd2ia27ier5n" path="res://Map/Background.jpeg" id="1_jxrne"]
+[ext_resource type="Texture2D" uid="uid://dmegddtpjdgd0" path="res://Map/Floor.png" id="2_1gsov"]
+[ext_resource type="PackedScene" uid="uid://y6e80ot4ui7h" path="res://Player/player_scene.tscn" id="3_6haov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwfrf"]
+size = Vector2(0.200303, 10367.9)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b8uhv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wmuk"]
+size = Vector2(32.2238, 351.999)
+
+[node name="Node2DScene" type="Node2D"]
+position = Vector2(0, -48)
+
+[node name="Sprite2D - background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 327.5)
+scale = Vector2(3.6, 1.74687)
+texture = ExtResource("1_jxrne")
+
+[node name="StaticBody2DWall" type="StaticBody2D" parent="."]
+position = Vector2(21168, 770.001)
+scale = Vector2(1278.06, 0.0625005)
+
+[node name="CollisionShape2DWall1" type="CollisionShape2D" parent="StaticBody2DWall"]
+position = Vector2(-16.6627, -6367.96)
+shape = SubResource("RectangleShape2D_rwfrf")
+
+[node name="CollisionShape2DWall2" type="CollisionShape2D" parent="StaticBody2DWall"]
+position = Vector2(-15.5611, -6367.96)
+shape = SubResource("RectangleShape2D_rwfrf")
+
+[node name="StaticBody2DFloor" type="StaticBody2D" parent="."]
+position = Vector2(576, 651)
+scale = Vector2(35.75, 0.250001)
+physics_material_override = SubResource("PhysicsMaterial_b8uhv")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2DFloor" type="CollisionShape2D" parent="StaticBody2DFloor"]
+shape = SubResource("RectangleShape2D_1wmuk")
+
+[node name="Sprite2DFloor" type="Sprite2D" parent="StaticBody2DFloor"]
+position = Vector2(7.15256e-07, -157.999)
+scale = Vector2(0.322238, 0.359997)
+texture = ExtResource("2_1gsov")
+
+[node name="RigidBody2DPlayer" parent="." instance=ExtResource("3_6haov")]
+position = Vector2(560, 384)
