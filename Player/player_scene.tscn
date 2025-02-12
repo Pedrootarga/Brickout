@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://y6e80ot4ui7h"]
 
 [ext_resource type="Script" path="res://Player/player_scene.gd" id="1_10060"]
-[ext_resource type="Texture2D" uid="uid://cqmxpoj1ijj6u" path="res://Player/Brickout.webp" id="2_uohxt"]
+[ext_resource type="Texture2D" uid="uid://d1yjtvtdscg5s" path="res://Player/Player.webp" id="2_4t3hu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_n6lmc"]
 
@@ -10,6 +10,8 @@ radius = 16.0
 
 [node name="RigidBody2DPlayer" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_n6lmc")
+lock_rotation = true
+linear_damp = 1.0
 script = ExtResource("1_10060")
 metadata/_edit_group_ = true
 
@@ -18,6 +20,6 @@ shape = SubResource("CircleShape2D_vjqf5")
 
 [node name="Sprite2DPlayer" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-3.8147e-06, -7.15256e-07)
+position = Vector2(-1, -12)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("2_uohxt")
+texture = ExtResource("2_4t3hu")

@@ -10,8 +10,7 @@
 script/source = "extends Node2D
 
 func _process(delta: float) -> void:
-	pass
-	#print($Bricks.get_child_count())
+	print($Bricks.get_child_count())
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwfrf"]
@@ -52,10 +51,6 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2DFloor" type="CollisionShape2D" parent="StaticBody2DFloor"]
 shape = SubResource("RectangleShape2D_1wmuk")
 
-[node name="CollisionShape2DFloor2" type="CollisionShape2D" parent="StaticBody2DFloor"]
-position = Vector2(0, -2588)
-shape = SubResource("RectangleShape2D_1wmuk")
-
 [node name="Sprite2DFloor" type="Sprite2D" parent="StaticBody2DFloor"]
 position = Vector2(7.15256e-07, -157.999)
 scale = Vector2(0.322238, 0.359997)
@@ -68,7 +63,4 @@ position = Vector2(560, 384)
 script = ExtResource("1_2jewc")
 
 [node name="Node2D" parent="Bricks" instance=ExtResource("4_4c0mh")]
-position = Vector2(0, 48)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(576, 292)
+position = Vector2(320, 128)

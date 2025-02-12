@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqmxpoj1ijj6u"
-path="res://.godot/imported/Brickout.webp-680e98be1854118e04ab22f701a0bdf2.ctex"
+uid="uid://d1yjtvtdscg5s"
+path="res://.godot/imported/Player.webp-c6224b7a564f057c1e0ba5c11ff946f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Brickout.webp"
-dest_files=["res://.godot/imported/Brickout.webp-680e98be1854118e04ab22f701a0bdf2.ctex"]
+source_file="res://Player/Player.webp"
+dest_files=["res://.godot/imported/Player.webp-c6224b7a564f057c1e0ba5c11ff946f3.ctex"]
 
 [params]
 
