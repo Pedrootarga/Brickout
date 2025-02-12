@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfbw5usx3ttwx"]
+[gd_scene load_steps=9 format=3 uid="uid://dfbw5usx3ttwx"]
 
+[ext_resource type="Script" path="res://Map/map_scene.gd" id="1_2jewc"]
 [ext_resource type="Texture2D" uid="uid://bcd2ia27ier5n" path="res://Map/Background.jpeg" id="1_jxrne"]
 [ext_resource type="Texture2D" uid="uid://dmegddtpjdgd0" path="res://Map/Floor.png" id="2_1gsov"]
 [ext_resource type="PackedScene" uid="uid://y6e80ot4ui7h" path="res://Player/player_scene.tscn" id="3_6haov"]
+[ext_resource type="PackedScene" uid="uid://bjlibglrmi5ta" path="res://Brick/main_brick_scene.tscn" id="4_4c0mh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwfrf"]
 size = Vector2(0.200303, 10367.9)
@@ -13,7 +15,7 @@ size = Vector2(0.200303, 10367.9)
 size = Vector2(32.2238, 351.999)
 
 [node name="Node2DScene" type="Node2D"]
-position = Vector2(0, -48)
+script = ExtResource("1_2jewc")
 
 [node name="Sprite2D - background" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -49,3 +51,12 @@ texture = ExtResource("2_1gsov")
 
 [node name="RigidBody2DPlayer" parent="." instance=ExtResource("3_6haov")]
 position = Vector2(560, 384)
+
+[node name="Node2D" parent="." instance=ExtResource("4_4c0mh")]
+position = Vector2(320, 128)
+
+[node name="Node2D3" parent="." instance=ExtResource("4_4c0mh")]
+position = Vector2(513, 128)
+
+[node name="Node2D2" parent="." instance=ExtResource("4_4c0mh")]
+position = Vector2(416, 128)

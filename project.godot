@@ -15,6 +15,10 @@ run/main_scene="res://Map/map_scene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Other/Icon.webp"
 
+[autoload]
+
+Globals="*res://globals.gd"
+
 [input]
 
 left={

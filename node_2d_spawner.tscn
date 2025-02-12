@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtrsit0ee03it"]
+
+[ext_resource type="Script" path="res://Brick/node_2d_spawner.gd" id="1_7f8o4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djv7o"]
+size = Vector2(32, 32)
+
+[node name="Node2DSpawner" type="Node2D"]
+script = ExtResource("1_7f8o4")
+metadata/_edit_group_ = true
+
+[node name="Area2DSpawner" type="Area2D" parent="."]
+position = Vector2(1, 0)
+
+[node name="CollisionShape2DSpawner" type="CollisionShape2D" parent="Area2DSpawner"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_djv7o")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
