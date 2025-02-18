@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcd2ia27ier5n"
-path="res://.godot/imported/Background.jpeg-4664ee35167defc078a0fdc0a9be992f.ctex"
+uid="uid://dit7ukamrauqb"
+path="res://.godot/imported/Sprite-idle0001.png-96847d1188e79222af7ccf9dc131761d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Map/Background.jpeg"
-dest_files=["res://.godot/imported/Background.jpeg-4664ee35167defc078a0fdc0a9be992f.ctex"]
+source_file="res://Player/Sprite/Sprite-idle0001.png"
+dest_files=["res://.godot/imported/Sprite-idle0001.png-96847d1188e79222af7ccf9dc131761d.ctex"]
 
 [params]
 
