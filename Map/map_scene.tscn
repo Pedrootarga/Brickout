@@ -46,6 +46,8 @@ shape = SubResource("RectangleShape2D_1wmuk")
 position = Vector2(587, 394)
 metadata/_edit_group_ = true
 
+[node name="Node2DBricks" type="Node2D" parent="."]
+
 [node name="BrickSpawner" type="Node2D" parent="."]
 script = ExtResource("3_1kp6f")
 brick_scene = ExtResource("3_dqcnt")
